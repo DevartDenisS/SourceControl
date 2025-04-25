@@ -7,3 +7,6 @@
 )
 ON [PRIMARY]
 GO
+
+EXEC sys.sp_addextendedproperty N'MS_Description', N'Customer information', 'SCHEMA', N'Sales', 'TABLE', N'Customers'
+GO
