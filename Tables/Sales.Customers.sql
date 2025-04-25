@@ -14,6 +14,21 @@ CREATE INDEX [IX_Customers_Email]
   ON [PRIMARY]
 GO
 
+SET QUOTED_IDENTIFIER, ANSI_NULLS ON
+GO
+-- Create trigger
+CREATE TRIGGER [Sales].[trg_Customers_Insert]
+ON [Sales].[Customers]
+AFTER INSERT
+AS
+BEGIN
+    PRINT 'New customer inserted';
+END;
+GO
+
+EXEC sys.sp_addextendedproperty N'MS_Description', N'Prints message after customer insert', 'SCHEMA', N'Sales', 'TABLE', N'Customers', 'TRIGGER', N'trg_Customers_Insert'
+GO
+
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Customer information', 'SCHEMA', N'Sales', 'TABLE', N'Customers'
 GO
 
