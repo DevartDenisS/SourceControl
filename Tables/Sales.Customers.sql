@@ -9,5 +9,10 @@
 ON [PRIMARY]
 GO
 
+CREATE INDEX [IX_Customers_Email]
+  ON [Sales].[Customers] ([Email])
+  ON [PRIMARY]
+GO
+
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Customer information', 'SCHEMA', N'Sales', 'TABLE', N'Customers'
 GO
