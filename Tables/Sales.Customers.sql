@@ -3,7 +3,8 @@
   [Name] [nvarchar](100) NOT NULL,
   [Email] [nvarchar](100) NOT NULL,
   [Phone] [nvarchar](20) NULL,
-  PRIMARY KEY CLUSTERED ([CustomerID])
+  PRIMARY KEY CLUSTERED ([CustomerID]),
+  CONSTRAINT [CHK_Email] CHECK ([Email] like '%@%')
 )
 ON [PRIMARY]
 GO
