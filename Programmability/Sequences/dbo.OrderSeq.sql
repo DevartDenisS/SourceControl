@@ -1,6 +1,0 @@
-﻿CREATE SEQUENCE [dbo].[OrderSeq]
-  AS bigint
-  INCREMENT BY 1
-  NO CYCLE
-  CACHE 
-GO
