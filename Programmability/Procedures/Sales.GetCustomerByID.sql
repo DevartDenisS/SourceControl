@@ -8,3 +8,6 @@ BEGIN
     SELECT * FROM Sales.Customers WHERE CustomerID = @CustomerID;
 END;
 GO
+
+EXEC sys.sp_addextendedproperty N'MS_Description', N'Retrieves customer by ID', 'SCHEMA', N'Sales', 'PROCEDURE', N'GetCustomerByID'
+GO
