@@ -11,3 +11,6 @@ GO
 ALTER TABLE [Sales].[Orders]
   ADD CONSTRAINT [FK_Orders_Customers] FOREIGN KEY ([CustomerID]) REFERENCES [Sales].[Customers] ([CustomerID])
 GO
+
+EXEC sys.sp_addextendedproperty N'MS_Description', N'Orders placed by customers', 'SCHEMA', N'Sales', 'TABLE', N'Orders'
+GO
