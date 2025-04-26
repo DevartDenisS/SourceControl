@@ -1,0 +1,4 @@
+﻿CREATE REMOTE SERVICE BINDING [SB_RemoteBinding]
+TO SERVICE 'SB_Service'
+WITH USER = [dbo]
+GO

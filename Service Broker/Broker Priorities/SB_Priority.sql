@@ -1,0 +1,6 @@
+﻿CREATE BROKER PRIORITY [SB_Priority]
+FOR CONVERSATION
+SET (
+     CONTRACT_NAME = [SB_Contract]
+);
+GO

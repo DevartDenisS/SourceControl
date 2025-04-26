@@ -1,0 +1,3 @@
+﻿CREATE USER [SalesUser]
+  WITHOUT LOGIN
+GO
