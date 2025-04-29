@@ -16,6 +16,17 @@ GO
 
 SET QUOTED_IDENTIFIER, ANSI_NULLS ON
 GO
+CREATE TRIGGER [Sales].[trg_Customers_SimpleMsg]
+ON [Sales].[Customers]
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+    PRINT 'Customers table changed';
+END;
+GO
+
+SET QUOTED_IDENTIFIER, ANSI_NULLS ON
+GO
 -- Create trigger
 CREATE TRIGGER [Sales].[trg_Customers_Insert]
 ON [Sales].[Customers]
@@ -33,4 +44,9 @@ EXEC sys.sp_addextendedproperty N'MS_Description', N'Customer information', 'SCH
 GO
 
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Index for quick search by Email', 'SCHEMA', N'Sales', 'TABLE', N'Customers', 'INDEX', N'IX_Customers_Email'
+GO
+
+
+
+SET QUOTED_IDENTIFIER, ANSI_NULLS ON
 GO
