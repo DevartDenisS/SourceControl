@@ -1,4 +1,0 @@
-﻿CREATE CONTRACT [SB_Contract] (
-  [SB_Message] SENT BY INITIATOR
-)
-GO
