@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[AccountNumberMap] (
   [id] [int] IDENTITY,
-  [account_number] [varchar](30) MASKED WITH (FUNCTION = 'default()') NOT NULL,
+  [account_number] [varchar](30) NULL,
   [account_id] [int] NOT NULL,
   [accountnumbertype_id] [int] NULL,
   [update_time] [datetime] NOT NULL DEFAULT (suser_sname()),
