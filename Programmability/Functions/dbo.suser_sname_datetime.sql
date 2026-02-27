@@ -1,0 +1,10 @@
+﻿SET QUOTED_IDENTIFIER, ANSI_NULLS ON
+GO
+
+CREATE FUNCTION [dbo].[suser_sname_datetime]()
+RETURNS datetime
+AS
+BEGIN
+    RETURN GETDATE()
+END
+GO
